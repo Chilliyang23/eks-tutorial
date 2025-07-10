@@ -1,0 +1,46 @@
+docker-hub-creds.md
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+config/secrets.yml
+
+# Dependencies & Build artifacts
+node_modules/
+dist/
+build/
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform variable files (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Terraform cache
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+
+# Serverless Framework
+.serverless/
+.webpack/
+serverless_sdk/
+
