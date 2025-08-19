@@ -1,5 +1,5 @@
 resource "aws_iam_role" "iam-role" {
-  name = var.iam-role
+  name               = var.iam-role
   assume_role_policy = <<EOF
   {
     "Version": "2012-10-17",
@@ -31,8 +31,8 @@ locals {
 }
 
 resource "aws_iam_role_policy_attachment" "iam-policy" {
-  for_each = toset(local.jenkins_policies)
-  role = aws_iam_role.iam-role.name
+  for_each   = toset(local.jenkins_policies)
+  role       = aws_iam_role.iam-role.name
   policy_arn = each.value
 }
 
